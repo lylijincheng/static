@@ -29,6 +29,13 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
 
+    <!-- jquery或zepto 依赖 -->
+    <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 微信JSSDK -->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!-- SocialMasterH5监测通用代码 -->
+    <script src="http://page.socialmaster.com.cn/lib/wx.min.js"></script>
+
   </head>
   <body>
     <!-- Add your site or app content here -->
@@ -47,5 +54,26 @@
     </script>
     -->
     <!-- Built with love using Web Starter Kit -->
+
+    <script>
+      SM_TRACK.DEBUG = false; // 可设置为 true 以调试
+
+      /* 请修改以下文字和图片，定制分享文案 */
+      SM_TRACK.setTimeLine({
+        title: '来自huahua的分享',
+        imgUrl: 'http://f.cdnmaster.com/upload/2015-06-16/1434422657899.jpg'
+      });
+      SM_TRACK.setAppMessage({
+        title: '来自huahua的分享',
+        imgUrl: 'http://f.cdnmaster.com/upload/2015-06-16/1434422657899.jpg',
+        desc: '来自huahua的分享 - 摘要'
+      });
+      SM_TRACK.setQQ({
+        title: '来自huahua的分享',
+        imgUrl: 'http://f.cdnmaster.com/upload/2015-06-16/1434422657899.jpg',
+        desc: '来自huahua的分享 - 摘要'
+      });
+    </script>
+
   </body>
 </html>
