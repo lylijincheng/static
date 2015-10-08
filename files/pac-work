@@ -2,6 +2,8 @@
 // https://github.com/clowwindy/gfwlist2pac
 
 var domains = {
+  "android.com": 1,
+  "2ality.com": 1,
   "digg.com": 1,
   "shadowsocks.com": 1,
   "npmjs.org": 1,
