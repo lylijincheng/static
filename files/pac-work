@@ -2,6 +2,8 @@
 // https://github.com/clowwindy/gfwlist2pac
 
 var domains = {
+  "cdnjs.cloudflare.com": 1,
+  "fb.me": 1,
   "leapoahead.com": 1,
   "jsfiddle.net": 1,
   "android.com": 1,
