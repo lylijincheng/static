@@ -2,6 +2,8 @@
 // https://github.com/clowwindy/gfwlist2pac
 
 var domains = {
+  "leapoahead.com": 1,
+  "jsfiddle.net": 1,
   "android.com": 1,
   "2ality.com": 1,
   "digg.com": 1,
