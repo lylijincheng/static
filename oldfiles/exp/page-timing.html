@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>page-load-timing</title>
+    <script>
+        // event listeners.
+        window.addEventListener('pageshow', onpageshow);
+        window.addEventListener('DOMContentLoaded', ondomcontentloaded);
+        window.addEventListener('load', onload);
+
+        function onpageshow() {
+            console.log(Date.now() + ' == pageshow');
+        }
+
+        function ondomcontentloaded() {
+            console.log(Date.now() + ' == domcontentloaded');
+        }
+
+        function onload() {
+            console.log(Date.now() + ' == load');
+
+            showTiming();
+        }
+
+        function showTiming() {
+            //console.log(window.performance);
+            var i, timing, textNode, p, doc, div;
+
+            if (window.performance) {
+                timing = window.performance.timing;
+
+                doc    = window.document;
+                div    = doc.createElement('div');
+
+                for (i in timing) {
+                    if (timing.hasOwnProperty(i)) {
+                        textNode = doc.createTextNode(timing[i] + " == " + i);
+                        p = doc.createElement('p');
+                        p.appendChild(textNode);
+                        div.appendChild(p);
+                    }
+                }
+
+                doc.getElementsByTagName('body')[0].appendChild(div);
+
+            } else {
+                console.log('No Navigation timing support :(');
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
